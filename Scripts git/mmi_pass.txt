@@ -1,0 +1,5 @@
+#!/bin/bash
+
+device=`adb devices | grep -v '9d4548e1' |grep -v 'List'| awk '{ print $1 }'`
+adb -s $device shell setprop l10mmi.srf.receive 1
+pause
